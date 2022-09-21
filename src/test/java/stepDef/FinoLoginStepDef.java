@@ -19,7 +19,7 @@ public class FinoLoginStepDef extends SeleniumUtilities {
 	@Given("I have Url")
 	public void i_have_url() throws IOException {
 		Url = ReadPropFile("url");
-		System.out.println("The Given Url Is: " + Url);
+		System.out.println("The Given Url is: " + Url);
 		driver = setUp("browserName", "url");
 	}
 
