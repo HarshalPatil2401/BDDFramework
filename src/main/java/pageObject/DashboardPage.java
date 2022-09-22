@@ -32,4 +32,9 @@ public WebElement displayDepo()
 	return depoWord;
 }
 
+public WebElement depoBalance()
+{
+	return DepoBalance;
+	
+}
 }
