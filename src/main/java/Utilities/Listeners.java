@@ -2,6 +2,7 @@ package Utilities;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,6 +19,7 @@ public class Listeners  extends SeleniumUtilities implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
+		
 		System.out.println("The Test has Been Failed :" + result.getTestName());
 		
 		

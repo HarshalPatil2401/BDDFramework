@@ -7,6 +7,9 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +28,7 @@ public class SeleniumUtilities {
 
 	
 	public static WebDriver driver;
+	public static  Logger log;
 
 	public WebDriver setUp(String x,String y) throws IOException {
 		String browser=ReadPropFile(x);
@@ -49,6 +53,9 @@ public class SeleniumUtilities {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.navigate().to(Url);
 		driver.manage().window().maximize();	
+		log=Logger.getLogger("Finorade_log");
+		PropertyConfigurator.configure("log4j.properties");
+		log.setLevel(Level.DEBUG);
 		
 		
 		
@@ -97,5 +104,16 @@ public class SeleniumUtilities {
 		File dst=new File("C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/target/My/FailedTest.png");
 		FileHandler.copy(src,dst);
 	}
+	
+	public static Logger invokeLogger()
+	{
+		log=Logger.getLogger("Finorade_log");
+		PropertyConfigurator.configure("log4j.properties");
+		log.setLevel(Level.DEBUG);
+		return log;
+		
+	}
+	
+	
 
 }

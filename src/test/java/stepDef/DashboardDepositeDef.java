@@ -31,6 +31,7 @@ public class DashboardDepositeDef extends SeleniumUtilities {
 		DashboardPage obj = new DashboardPage(driver);
 		Thread.sleep(3000);
 	  System.out.println(obj.displayDepo().isDisplayed()); 
+	  driver.close();
 	}
 	
 	
