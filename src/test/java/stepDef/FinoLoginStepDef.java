@@ -49,6 +49,7 @@ public class FinoLoginStepDef extends SeleniumUtilities {
 	public void verify_home_page() {
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.finotrades.com/login");
 		driver.close();
+		log.info("user verify homepage");
 	}
 
 	@Given("i have url  and go to login page")
@@ -65,6 +66,7 @@ public class FinoLoginStepDef extends SeleniumUtilities {
 	public void i_enter_id_and_pass() {
 		loginPage obj = new loginPage(driver);
 		obj.login();
+		log.info("user press login btn");
 	}
 
 	@Then("i clicked on login btn and looged in")
