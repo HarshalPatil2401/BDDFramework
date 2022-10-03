@@ -1,8 +1,42 @@
-2022-09-24 22:05:47,884 INFO  Finorade_log:32 - log have been placed
-2022-09-24 22:05:47,887 INFO  Finorade_log:33 - given url
-2022-09-24 22:12:24,975 INFO  Finorade_log:32 - log have been placed
-2022-09-24 22:12:24,978 INFO  Finorade_log:33 - given url
-2022-09-24 22:12:47,174 INFO  Finorade_log:45 - signed into webpage
-2022-09-24 22:18:22,319 INFO  Finorade_log:32 - log have been placed
-2022-09-24 22:18:22,325 INFO  Finorade_log:33 - given url
-2022-09-24 22:18:38,558 INFO  Finorade_log:45 - signed into webpage
+2022-10-03 12:17:06,484 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:17:06,493 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:17:06,511 INFO  Finorade_log:33 - log have been placed
+2022-10-03 12:17:06,512 INFO  Finorade_log:34 - given url
+2022-10-03 12:17:30,587 INFO  Finorade_log:46 - signed into webpage
+2022-10-03 12:17:30,688 INFO  Finorade_log:53 - user verify homepage
+2022-10-03 12:17:30,691 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:17:30,702 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:17:54,125 INFO  Finorade_log:70 - user press login btn
+2022-10-03 12:17:57,572 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:17:57,575 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:18:24,025 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:18:24,031 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:18:46,620 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:18:46,623 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:19:16,910 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:19:16,919 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:19:43,273 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:19:43,385 INFO  Listeners:60 - finished!!!!!
+2022-10-03 12:24:00,448 INFO  FinoLoginStepDef:23 - chrome has been started
+2022-10-03 12:24:09,991 INFO  FinoLoginStepDef:28 - signed into login
+2022-10-03 12:24:17,990 INFO  FinoLoginStepDef:31 - login was succesful
+2022-10-03 12:24:21,066 INFO  FinoLoginStepDef:40 - deposite word is displayed
+2022-10-03 12:24:22,521 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:24:22,533 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:24:22,552 INFO  FinoLoginStepDef:27 - log have been placed
+2022-10-03 12:24:22,553 INFO  FinoLoginStepDef:28 - given url
+2022-10-03 12:24:40,127 INFO  FinoLoginStepDef:40 - signed into webpage
+2022-10-03 12:24:40,202 INFO  FinoLoginStepDef:47 - user verify homepage
+2022-10-03 12:24:40,209 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:24:40,212 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:25:13,705 INFO  FinoLoginStepDef:64 - user press login btn
+2022-10-03 12:25:17,045 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:25:17,048 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:25:37,241 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:25:37,249 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:26:11,040 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:26:11,046 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:26:42,557 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:26:42,568 INFO  Listeners:21 - test execution started!!!
+2022-10-03 12:27:16,907 INFO  Listeners:27 - test has been passed!!!!!!
+2022-10-03 12:27:17,026 INFO  Listeners:60 - finished!!!!!

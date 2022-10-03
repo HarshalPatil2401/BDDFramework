@@ -114,6 +114,17 @@ public class SeleniumUtilities {
 		
 	}
 	
+		public static void takesScreenShot(String MethodName)
+		{
+		   File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		   try {
+			FileHandler.copy(src, new File("C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/target/My/"+MethodName+".png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	
 
 }

@@ -7,33 +7,42 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listeners  extends SeleniumUtilities implements ITestListener {
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
+public class Listeners  extends SeleniumUtilities implements ITestListener {
+	ThreadLocal<ExtentTest> extentTestThread = new ThreadLocal<ExtentTest>();
+	ExtentReports extentReport = ExtendReport.getExtentReport();
+	ExtentTest extentTest;
+	static Logger log = Logger.getLogger(Listeners.class);
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("test start");
+		log.info("test execution started!!!");
+		extentTest = extentReport.createTest(result.getName()+" execution started");
+		extentTestThread.set(extentTest);
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("The Test Has been Passed pass");
+		log.info("test has been passed!!!!!!");
+		extentTestThread.get().log(Status.PASS,"Test Passed");
 	}
 
 	public void onTestFailure(ITestResult result) {
+		extentTestThread.get().fail(result.getThrowable());
 		
-		System.out.println("The Test has Been Failed :" + result.getTestName());
 		
+		
+		takesScreenShot(result.getClass().getName());
 		
 		
 		
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		System.out.println("The test has been Skipped :" + result.getTestName());
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		System.out.println("the Method Has been Passed but not valid :" + result.getTestName());
-		
 			try {
 				failedTest();
 			} catch (IOException e) {
@@ -44,11 +53,12 @@ public class Listeners  extends SeleniumUtilities implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		System.out.println("The Executio Has Been Started:-->");
+		log.info("started!!!!!");
 	}
 
 	public void onFinish(ITestContext context) {
-		System.out.println("The execution is Ended.");
+		log.info("finished!!!!!");
+		extentReport.flush();
 	}
 
 }
