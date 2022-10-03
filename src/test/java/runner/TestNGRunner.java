@@ -5,10 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 
-@CucumberOptions(features= {"C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/src/test/resources/features/check_faq.feature",
-		                    "C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/src/test/resources/features/FinoLogin.feature",
-		                    "C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/src/test/resources/features/Dashboard.feature",
-		                    "C:/Users/Harshal/eclipse-workspace-new/BDDTestNG/src/test/resources/features/login.feature"
+@CucumberOptions(features= {"classpath:features/"
                             },
                       glue= {"stepDef"},
                    plugin = { "html:target/My/cucumber-html-report.html", "pretty" })

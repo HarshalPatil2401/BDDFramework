@@ -11,19 +11,14 @@ import Utilities.SeleniumUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObject.DashboardPage;
 import pageObject.homePage;
 import pageObject.loginPage;
 
 public class FinoLoginStepDef extends SeleniumUtilities {
 	WebDriver driver;
 	String Url;
-	Logger log;
-	
-	public FinoLoginStepDef()
-	{
-		this.log=invokeLogger();
-	}
-	
+	Logger log = Logger.getLogger(FinoLoginStepDef.class);
 	
 	@Given("I have Url")
 	public void i_have_url() throws IOException {
@@ -71,9 +66,11 @@ public class FinoLoginStepDef extends SeleniumUtilities {
 
 	@Then("i clicked on login btn and looged in")
 	public void i_clicked_on_login_btn_and_looged_in() throws InterruptedException {
-		loginPage obj = new loginPage(driver);
-	//	boolean alert=obj.alert().isDisplayed();
-		//Assert.assertFalse(alert);
+		
+		DashboardPage obj1 = new DashboardPage(driver);
+		
+		//boolean logo=obj1.LogoDispaly().isDisplayed();
+		Assert.assertTrue(obj1.LogoDispaly());
 		Thread.sleep(3000);
 		driver.close();
 	}

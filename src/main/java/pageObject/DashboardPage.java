@@ -6,13 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class DashboardPage {
+import Utilities.SeleniumUtilities;
+
+public class DashboardPage extends SeleniumUtilities{
 
 	
 	WebDriver driver;
 	public DashboardPage(WebDriver driver)
 	{
-		driver=this.driver;
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -23,7 +25,7 @@ WebElement depositelogo;
 @FindBy(xpath="(//*[@class=\"card-title text-light\"])[1]")
 WebElement DepoBalance;
 
-@FindBy(xpath="//*[contains(text(),'Deposited')]")
+@FindBy(xpath="//p[contains(text(),'Deposited')]")
 WebElement depoWord;
 
 public WebElement displayDepo()
@@ -32,9 +34,28 @@ public WebElement displayDepo()
 	return depoWord;
 }
 
+@FindBy(xpath="(//*[@class='logo'])[1]")
+WebElement Logo;
+
+public boolean LogoDispaly()
+{
+	boolean logo=Logo.isDisplayed();
+	return logo;
+}
+
 public WebElement depoBalance()
 {
 	return DepoBalance;
 	
 }
+@FindBy(xpath="//p[contains(text(),'Support')]")
+WebElement support;
+
+public void support()
+{
+	clickElement(support);
+}
+
+
+
 }
