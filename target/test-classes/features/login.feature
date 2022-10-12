@@ -1,5 +1,6 @@
 Feature: home Page test case
 
+@Smoke
   Scenario Outline: check login functionality
     Given I have url and homepage
     And I have "<username>" and "<password>"
