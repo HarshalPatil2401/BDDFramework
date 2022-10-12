@@ -1,5 +1,6 @@
 Feature: check functioning of homepage
 
+@Regression
 Scenario:check faq working
 
 Given i have url

@@ -19,7 +19,7 @@ public class Listeners  extends SeleniumUtilities implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		log.info("test execution started!!!");
-		extentTest = extentReport.createTest(result.getName()+" execution started");
+		extentTest = extentReport.createTest(result.getMethod().getQualifiedName()+" execution started");
 		extentTestThread.set(extentTest);
 	}
 

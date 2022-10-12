@@ -8,7 +8,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features= {"classpath:features/"
                             },
                       glue= {"stepDef"},
-                   plugin = { "html:target/My/cucumber-html-report.html", "pretty" })
+                   plugin = { "html:target/My/cucumber-html-report.html", "pretty" },
+                   tags="@Smoke")
+
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 	
 	

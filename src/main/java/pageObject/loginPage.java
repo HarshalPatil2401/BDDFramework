@@ -19,13 +19,13 @@ public class loginPage extends SeleniumUtilities {
 	
 	
 	@FindBy(xpath="//*[@id='email']")
-	 WebElement email;
+	private WebElement email;
 	
 	@FindBy(xpath="//*[@id='password']")
-     WebElement password;
+   private  WebElement password;
 	
 	@FindBy(xpath="//*[@type='submit']")
-	WebElement loginbtn;
+	private WebElement loginbtn;
 	public WebElement email()
 	{
 		return email;
@@ -47,7 +47,7 @@ public class loginPage extends SeleniumUtilities {
 	}
 	
 	@FindBy(xpath="//*[@class='alert alert-danger']")
-	WebElement alert;
+	private WebElement alert;
 	public WebElement alert()
 	{
 		return alert;
